@@ -5,7 +5,7 @@
 #include <sys/msg.h>
 
 #define MAX_TEXT_SIZE 100
-#define MAX_STRINGS 3
+#define MAX_STRINGS 10
 
 struct msg_buffer {
     long msg_type;
@@ -16,8 +16,8 @@ int main() {
     key_t key;
     int msgid;
     struct msg_buffer message;
-    char strings[MAX_STRINGS][MAX_TEXT_SIZE] = {"Hello", "World", "OpenAI"};
-    
+    char strings[MAX_STRINGS][MAX_TEXT_SIZE] = {"Hello", "World", "This", "Is", "Sambit", "Sarkar", "Student", "Of", "RCC", "Beleghata"};
+
     // Generate a unique key
     key = ftok("sender.c", 'a');
 
